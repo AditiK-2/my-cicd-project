@@ -30,7 +30,7 @@ pipeline {
             steps {
                 echo 'Deploying application...'
 
-	 	sshagent(['app-ec2-key']) {
+	 	sshagent(['app-ec2-key2']) {
             sh '''
                 scp -o StrictHostKeyChecking=no index.html ubuntu@13.63.237.36:/tmp/index.html
                 ssh -o StrictHostKeyChecking=no ubuntu@13.63.237.36 "sudo cp /tmp/index.html /var/www/html/index.html"
