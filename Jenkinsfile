@@ -32,8 +32,8 @@ pipeline {
 
 	 	sshagent(['app-ec2-key-3']) {
             sh '''
-                scp -o StrictHostKeyChecking=no index.html ubuntu@13.63.237.36:/tmp/index.html
-                ssh -o StrictHostKeyChecking=no ubuntu@13.63.237.36 "sudo cp /tmp/index.html /var/www/html/index.html"
+                scp -o StrictHostKeyChecking=no index.html ubuntu@13.51.204.120:/tmp/index.html
+                ssh -o StrictHostKeyChecking=no ubuntu@13.51.204.120 "sudo cp /tmp/index.html /var/www/html/index.html"
             '''
                }
             }
